@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("Git checkout"){
+            steps{
+              git credentialsId: 'githubid', url: 'https://github.com/logeshSLK/myweb'
+            }
+        }
+    }
+}
